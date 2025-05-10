@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamDiscountFinder.Data", "SteamDiscountFinder.Data\SteamDiscountFinder.Data.csproj", "{ECF39329-EFD5-4415-BD95-A2EE80943D4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamDiscountFinder.Service", "SteamDiscountFinder.Service\SteamDiscountFinder.Service.csproj", "{F0905161-C782-41DC-A335-135AD43D0246}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamDiscountFinder.Console", "SteamDiscountFinder.Console\SteamDiscountFinder.Console.csproj", "{C10BD39F-CB18-4EA3-B933-536F7019C73B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamDiscountFinder.Tests", "SteamDiscountFinder.Tests\SteamDiscountFinder.Tests.csproj", "{EE099FE5-9F8D-4E74-AB38-F0BBAC7CC433}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamDiscountFinder.Web", "SteamDiscountFinder.Web\SteamDiscountFinder.Web.csproj", "{5BD13C6F-B64A-46C5-8EB9-6FA035CE3E7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C6153C1-9F12-4C66-88DD-95F0D38D557D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF39329-EFD5-4415-BD95-A2EE80943D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF39329-EFD5-4415-BD95-A2EE80943D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF39329-EFD5-4415-BD95-A2EE80943D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF39329-EFD5-4415-BD95-A2EE80943D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0905161-C782-41DC-A335-135AD43D0246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0905161-C782-41DC-A335-135AD43D0246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0905161-C782-41DC-A335-135AD43D0246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0905161-C782-41DC-A335-135AD43D0246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10BD39F-CB18-4EA3-B933-536F7019C73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10BD39F-CB18-4EA3-B933-536F7019C73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10BD39F-CB18-4EA3-B933-536F7019C73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10BD39F-CB18-4EA3-B933-536F7019C73B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE099FE5-9F8D-4E74-AB38-F0BBAC7CC433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE099FE5-9F8D-4E74-AB38-F0BBAC7CC433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE099FE5-9F8D-4E74-AB38-F0BBAC7CC433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE099FE5-9F8D-4E74-AB38-F0BBAC7CC433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD13C6F-B64A-46C5-8EB9-6FA035CE3E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD13C6F-B64A-46C5-8EB9-6FA035CE3E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD13C6F-B64A-46C5-8EB9-6FA035CE3E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD13C6F-B64A-46C5-8EB9-6FA035CE3E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

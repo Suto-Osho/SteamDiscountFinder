@@ -1,0 +1,130 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Steam Discount Finder";
+}
+
+<div class="container mt-5">
+    <div class="card bg-dark text-light shadow-lg">
+        <div class="card-body">
+            <h1 class="card-title text-center mb-4">Steam Discount Finder</h1>
+
+            <!-- Search & Filter Form -->
+            <form method="get" class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <input type="text" name="search" value="@Request.Query["search"]" class="form-control" placeholder="Search by game title..." />
+                </div>
+                <div class="col-md-2">
+                    <select name="sort" class="form-select">
+                        <option value="">Sort By</option>
+                        <option value="Title" selected="@("Title" == Request.Query["sort"])">Title</option>
+                        <option value="Savings" selected="@("Savings" == Request.Query["sort"])">Discount %</option>
+                        <option value="Price" selected="@("Price" == Request.Query["sort"])">Price</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" name="minPrice" value="@Request.Query["minPrice"]" class="form-control" placeholder="Min Price" />
+                </div>
+                <div class="col-md-2">
+                    <input type="number" name="maxPrice" value="@Request.Query["maxPrice"]" class="form-control" placeholder="Max Price" />
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn custom-apply-btn w-100 fw-bold">Apply</button>
+                </div>
+            </form>
+
+            <!-- Deals Table -->
+            <table class="table table-hover text-light align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Normal Price</th>
+                        <th>Sale Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if (Model.Deals.Count == 0)
+                {
+                    <tr><td colspan="4" class="text-center">No deals found.</td></tr>
+                }
+                else
+                {
+                    foreach (var deal in Model.Deals)
+                    {
+                        <tr class="game-row">
+                            <td>@deal.title</td>
+                            <td>$@deal.normalPrice</td>
+                            <td class="text-success fw-bold">$@deal.salePrice</td>
+                            <td>
+                                <a href="https://store.steampowered.com/app/@deal.steamAppID" class="btn custom-view-btn btn-sm fw-bold" target="_blank">View</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+
+            <!-- Pagination Controls -->
+<div class="d-flex justify-content-center align-items-center mt-4 gap-3">
+    <a class="btn btn-outline-light @(Model.CurrentPage <= 1 ? "disabled" : "")"
+       href="@Url.Page("", null, new {
+            search = Request.Query["search"],
+            sort = Request.Query["sort"],
+            minPrice = Request.Query["minPrice"],
+            maxPrice = Request.Query["maxPrice"],
+            currentPage = Model.CurrentPage > 1 ? Model.CurrentPage - 1 : 1
+       })">Previous</a>
+
+    <span class="text-white fw-bold fs-5">Page @Model.CurrentPage</span>
+
+    <a class="btn btn-outline-light"
+       href="@Url.Page("", null, new {
+            search = Request.Query["search"],
+            sort = Request.Query["sort"],
+            minPrice = Request.Query["minPrice"],
+            maxPrice = Request.Query["maxPrice"],
+            currentPage = Model.CurrentPage + 1
+       })">Next</a>
+</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #2b0a17; /* burgundy backdrop */
+    }
+    .game-row:hover {
+        background-color: #80000055; /* semi-transparent maroon on hover */
+        transition: background-color 0.3s ease;
+    }
+.custom-view-btn {
+    background-color: #800020; /* burgundy */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-view-btn:hover {
+    background-color: #5c0010;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #5c001080;
+
+}
+.custom-apply-btn {
+    background-color: #800020; /* burgundy */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.custom-apply-btn:hover {
+    background-color: #5c0010;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #5c001080;
+
+}
+
+</style>

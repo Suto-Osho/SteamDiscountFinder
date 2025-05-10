@@ -1,0 +1,14 @@
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\bin\Debug\net8.0\SteamDiscountFinder.Data.deps.json
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\bin\Debug\net8.0\SteamDiscountFinder.Data.runtimeconfig.json
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\bin\Debug\net8.0\SteamDiscountFinder.Data.dll
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\bin\Debug\net8.0\SteamDiscountFinder.Data.pdb
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.csproj.AssemblyReference.cache
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.AssemblyInfoInputs.cache
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.AssemblyInfo.cs
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.dll
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\refint\SteamDiscountFinder.Data.dll
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.pdb
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\SteamDiscountFinder.Data.genruntimeconfig.cache
+C:\Users\osho\source\repos\SteamDiscountFinder\SteamDiscountFinder.Data\obj\Debug\net8.0\ref\SteamDiscountFinder.Data.dll

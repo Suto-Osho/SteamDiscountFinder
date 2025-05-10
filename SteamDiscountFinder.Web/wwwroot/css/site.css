@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color: #2e1a1f; /* Deep maroon background */
+    color: #f5f5f5; /* Light text */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #b03060; /* Burgundy */
+}
+
+
+
+.btn-primary {
+    background-color: #b03060;
+    border-color: #b03060;
+}
+
+    .btn-primary:hover {
+        background-color: #8b1c47;
+        border-color: #8b1c47;
+    }
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+/* Maroon background for the table rows */
+.table tbody tr {
+    background-color: #800020; /* Maroon background */
+    color: white; /* White text for better contrast */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.table tbody tr {
+    border-bottom: 2px solid #4d0e19; /* Dark border */
+}
+
+    /* Hover effect to lighten up the row */
+    .table tbody tr:hover {
+        background-color: #b03060; /* Lighter burgundy */
+        color: #f5f5f5; /* Lighter text on hover */
+    }
+.table tbody tr:hover {
+        background-color: #b03060;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
