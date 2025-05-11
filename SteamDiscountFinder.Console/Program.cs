@@ -23,7 +23,7 @@ class Program
         // Fetch discounted games
         var games = await steamService.GetDiscountedGamesAsync();
 
-        Console.WriteLine("🎮 Steam Discounted Games:\n");
+        Console.WriteLine("Steam Discounted Games:\n");
 
         foreach (var game in games)
         {
