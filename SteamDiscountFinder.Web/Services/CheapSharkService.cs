@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Linq;
+using System;
 
 namespace SteamDiscountFinder.Web.Services
 {
@@ -15,19 +17,14 @@ namespace SteamDiscountFinder.Web.Services
         }
 
         public async Task<List<GameDeal>> GetSteamDealsAsync(
-    string? title = null,
-    string? sort = null,
-    int? minPrice = null,
-    int? maxPrice = null,
-    int page = 1,
-    int pageSize = 20)
+            string? title = null,
+            string? sort = null,
+            int? minPrice = null,
+            int? maxPrice = null,
+            int page = 1,
+            int pageSize = 20)
         {
-            var query = new List<string>
-    {
-        "storeID=1",
-        $"page={page}",             // <-- This MUST reflect the passed-in `page`
-        $"pageSize={pageSize}"
-    };
+            var query = new List<string> { "storeID=1" };
 
             if (!string.IsNullOrWhiteSpace(title))
                 query.Add($"title={Uri.EscapeDataString(title)}");
@@ -43,9 +40,13 @@ namespace SteamDiscountFinder.Web.Services
             var url = $"https://www.cheapshark.com/api/1.0/deals?{string.Join("&", query)}";
 
             var response = await _httpClient.GetStringAsync(url);
-            var deals = JsonConvert.DeserializeObject<List<GameDeal>>(response);
+            var allDeals = JsonConvert.DeserializeObject<List<GameDeal>>(response) ?? new List<GameDeal>();
 
-            return deals ?? new List<GameDeal>();
+            // Manually apply pagination
+            return allDeals
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
         }
     }
 
