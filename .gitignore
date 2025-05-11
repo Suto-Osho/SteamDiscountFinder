@@ -1,11 +1,66 @@
-# Ignore Visual Studio files
-.vs/
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.app
+*.appx
+*.msix
 *.user
 *.suo
 
-# Ignore build outputs
-bin/
-obj/
+# Visual Studio files
+.vs/
+.vscode/
+*.vc.db
+*.pdb
 
-# Ignore Rider and other IDE configs
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
 .idea/
+
+# Test results
+TestResults/
+*.TestDriven/
+
+# Temporary files
+*.log
+*.tmp
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Others
+*.cache
+*.dbmdl
+*.bak
+
+# OS-generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Ignore all generated folders from your solution
+SteamDiscountFinder.Console/bin/
+SteamDiscountFinder.Console/obj/
+SteamDiscountFinder.Data/bin/
+SteamDiscountFinder.Data/obj/
+SteamDiscountFinder.Service/bin/
+SteamDiscountFinder.Service/obj/
+SteamDiscountFinder.Tests/bin/
+SteamDiscountFinder.Tests/obj/
+SteamDiscountFinder.Web/bin/
+SteamDiscountFinder.Web/obj/
+SteamDiscountFinder.Web/SteamDiscountFinder.Web.csproj.user
