@@ -37,6 +37,6 @@ class Program
         // Save to database
         dbContext.Games.AddRange(games);
         await dbContext.SaveChangesAsync();
-        Console.WriteLine("\n✅ Games saved to the database.");
+        Console.WriteLine("\n Games saved to the database.");
     }
 }
